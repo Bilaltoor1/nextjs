@@ -2,14 +2,13 @@ import Card from "@/components/Card";
 import FilterHeader from "@/components/FilterHeader";
 import QuestionCreate from "@/components/shared/QuestionCreate";
 import {
-  deleteQuestion,
   getQuestion,
-  getSingleQuestion,
 } from "@/lib/actions/question.action";
 
 export default async function Home({ searchParams }: any) {
   const questions = await getQuestion({
     filter: searchParams.filter,
+      searchQuery: searchParams.q,
   });
   // await deleteQuestion();
   return (
