@@ -5,6 +5,34 @@
 body {
   font-family: "Inter", sans-serif;
 }
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+@layer base {
+  *{
+    @apply m-0 p-0 box-border
+  }
+  :root{
+    --color-background : 237 242 244;
+    --color-text : 13 27 42;
+    --color-main-bg : 248 249 250;
+    --color-heading :  22 26 29;
+    --text-heading : 1.875rem;
+  }
+  :root[class="dark"] {
+    --color-background : 0 0 0;
+    --color-text : 248 249 250;
+    --color-main-bg :  11 9 10;
+    --color-heading : 226 234 252
+  }
+  :root[class="light"] {
+    --color-background : 237 242 244;
+    --color-text : 13 27 42;
+    --color-main-bg : 248 249 250;
+    --color-heading :  22 26 29
+
+  }}
 @layer utilities {
   .flex-center {
     @apply flex justify-center items-center;
